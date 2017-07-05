@@ -8,4 +8,10 @@ whenever we restart or start our computer we 'must' run:
 sudo mongod
 
 then leaving the terminal/command prompt window in which we run the command
-open.
+open. This project requires the following Node/npm packages:
+
+- ExpressJS
+- Body Parser
+- Mongoose
+
+npm install --save express body-parser mongoose
