@@ -14,18 +14,17 @@ app.get('/', function(req,res){
   res.send("Hello");
 });
 
-app.post('/', function(req,res){
+app.post('/', function(req, res) {
   var superhero = new Superhero();
   superhero.name = req.body.name;
   superhero.superPower = req.body.superPower;
 
-  superhero.save(function(superhero, err){
+  superhero.save().then(function(superhero) {
     res.send(superhero);
-  }, function(err){
-    res.send(err);
+  }, function(err) {
+    res.send("Failed to save :( ")
   })
-
-})
+});
 
 var server = app.listen(port, function(){
   console.log("Listening on port", port);
