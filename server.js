@@ -5,13 +5,17 @@ var Superhero = require('./models/Superhero')
 var app = express();
 var port = 3000;
 
-mongoose.connect('mongodb://localhost/superhero');
+mongoose.connect('mongodb://localhost/superheroes');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', function(req,res){
-  res.send("Hello");
+  Superhero.find(function(err, superheroes){
+    if (err)
+      throw err;
+    res.json({data: superheroes, message: "heroes succesfully received"});
+  })
 });
 
 app.post('/', function(req, res) {
