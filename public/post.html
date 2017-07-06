@@ -4,12 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Superhero Vue Project</title>
+    <title></title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./styles.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,21 +18,31 @@
     <![endif]-->
   </head>
   <body>
-<div class="" id="app">
-<div class="container jumbotron">
-  <h1 class="titleHeader">{{title}}</h1>
-</div>
-<div class="container">
-  <div class="row" v-for="h in heroes">
-      <div class="col-md-4">{{h.name}}</div>
-      <div class="col-md-4">{{h.superPower}}</div>
-      <div class="col-md-4">
-          <img :src="h.img"/>
+    <div id="app">
+      <div class="container jumbotron">
+        <h1>{{ postTitle }}</h1>
       </div>
-  </div>
+      <form v-on:submit.prevent="postHero">
+        <div class="col-md-12">
+          <label>Superhero Name</label>
+          <input type="text" v-model="name"/>
+        </div>
+        <div class="col-md-12">
+            <label>Superhero Power</label>
+            <input type="text" v-model="superPower"/>
+        </div>
+        <div class="col-md-12">
+          <label>Superhero Picture</label>
+          <input type="text" v-model="img"/>
+        </div>
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-success">Submit Superhero</button>
+        </div>
 
-</div>
-</div>
+      </form>
+
+    </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
