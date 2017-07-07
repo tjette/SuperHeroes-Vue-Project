@@ -42,7 +42,17 @@ var app = new Vue ({
         }).done(function(response){
           console.log(response.data, "Hero Created");
         })
-      }
+      },
+      deleteHero: function(_id){
+        console.log("Deleting hero", _id)
+        var self = this;
 
+        $.ajax({
+          method: "DELETE",
+          url: "/api/" + _id,
+        }).done(function(response){
+          console.log(response);
+        })
+      }
     }
 });

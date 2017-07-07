@@ -25,10 +25,17 @@
 </div>
 <div class="container">
   <div class="row" v-for="h in heroes">
-      <div class="col-md-4">{{h.name}}</div>
-      <div class="col-md-4">{{h.superPower}}</div>
+      <div class="col-md-4">
+        {{h.name}}
+      </div>
+      <div class="col-md-4">
+        {{h.superPower}}
+      </div>
       <div class="col-md-4">
           <img :src="h.img"/>
+      </div>
+      <div class="col-md-12">
+        <button type="button" class="btn btn-danger" v-on:click="deleteHero(h._id)">Delete Hero</button>
       </div>
   </div>
 
