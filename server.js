@@ -14,16 +14,24 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/api', function(req,res){
   Superhero.find(function(err, superheroes){
-    if (err)
-      throw err;
-    res.json({data: superheroes, message: "heroes succesfully received"});
+    if (err) {
+      res.send(err);
+    } else {
+      res.json({data: superheroes, message: "heroes succesfully received"});
+    }
+
+
   })
 });
 //params allows you to grab a unique id to find a specific document
 app.get("/api/:_id", function(req,res){
   Superhero.findById(req.params._id, function(err, superhero){
-    if (err) throw err;
-    res.json({data: superhero, message: "Hero retrieved!"});
+    if (err) {
+      res.send(err);
+    } else {
+      res.json({data: superhero, message: "Hero retrieved!"});
+    }
+
   });
 });
 
@@ -40,6 +48,16 @@ app.post('/api', function(req, res) {
     res.send("Failed to save :( ")
   })
 });
+
+app.delete('/api/:_id', function(req,res){
+  Superhero.remove({_id: req.params._id }, function(err){
+    if(err){
+      res.send("Error", err)
+    } else {
+      res.send("Superhero deleted");
+    }
+  })
+})
 
 var server = app.listen(port, function(){
   console.log("Listening on port", port);
