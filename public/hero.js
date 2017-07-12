@@ -43,6 +43,7 @@ var app = new Vue ({
         }).done(function(response){
           console.log(response);
           console.log(response.data, "Hero Created");
+          response.redirect('/');
         })
       },
       deleteHero: function(_id){
