@@ -37,6 +37,10 @@ body{
 img.flex-item.heroData {
     border-radius: 50%;
 }
+img.titleHeader {
+    margin: auto;
+    display: block;
+}
 .container.jumbotron {
   background-color: black;
   color: yellow;
@@ -58,7 +62,7 @@ img.headerImage {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: lightgreen;
+    background-color: white;
 }
 
 .postItem {
