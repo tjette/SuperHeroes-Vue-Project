@@ -23,20 +23,15 @@
 <div class="container jumbotron">
   <h1 class="titleHeader">{{title}}</h1>
 </div>
-<div class="container">
-  <div class="row" v-for="h in heroes">
-      <div class="col-md-4">
-        {{h.name}}
-      </div>
-      <div class="col-md-4">
-        {{h.superPower}}
-      </div>
-      <div class="col-md-4">
-          <img :src="h.img"/>
-      </div>
-      <div class="col-md-12">
-        <button type="button" class="btn btn-danger" v-on:click="deleteHero(h._id)">Delete Hero</button>
-      </div>
+<div class="flex-container">
+  <div class="flex-item" v-for="h in heroes">
+      <h3 class="flex-item heroData">{{h.name}}</h3>
+      <p class="flex-item heroData">{{h.superPower}}</p>
+      <img class="flex-item heroData" :src="h.img"/>
+
+  <div class="col-md-12">
+      <button type="button" class="btn btn-danger" v-on:click="deleteHero(h._id)">Delete Hero</button>
+  </div>
   </div>
 
 </div>

@@ -1,3 +1,46 @@
 .titleHeader {
   text-align: center;
 }
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px black solid;
+}
+
+.flex-item {
+    display: flex;
+    margin: 10px;
+    width: 33%;
+    flex-wrap: wrap;
+    border: 3px red solid;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroData {
+  height: 150px;
+}
+
+.postTitle{
+  text-align: center;
+}
+
+.postContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgreen;
+}
+
+.postItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+}
+
+label.postLabel {
+    margin-right: 10px;
+}

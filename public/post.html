@@ -9,6 +9,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,27 +20,29 @@
   </head>
   <body>
     <div id="app">
-      <div class="container jumbotron">
+      <div class="container jumbotron postTitle">
         <h1>{{ postTitle }}</h1>
       </div>
-      <form v-on:submit.prevent="postHero">
-        <div class="col-md-12">
-          <label>Superhero Name</label>
+      <div class="postContainer">
+      <form class="" v-on:submit.prevent="postHero">
+        <div class="postItem">
+          <label class="postLabel">Superhero Name</label>
           <input type="text" v-model="name"/>
         </div>
-        <div class="col-md-12">
-            <label>Superhero Power</label>
+        <div class="postItem">
+            <label class="postLabel">Superhero Power</label>
             <input type="text" v-model="superPower"/>
         </div>
-        <div class="col-md-12">
-          <label>Superhero Picture</label>
+        <div class="postItem">
+          <label class="postLabel">Superhero Picture</label>
           <input type="text" v-model="img"/>
         </div>
-        <div class="col-md-12">
-          <button type="submit" class="btn btn-success">Submit Superhero</button>
+        <div class="postItem">
+          <button type="submit" class="btn btn-primary">Submit Superhero</button>
         </div>
 
       </form>
+    </div>
 
     </div>
 
