@@ -1,3 +1,6 @@
+body{
+  background-color: red;
+}
 .titleHeader {
   text-align: center;
 }
@@ -7,27 +10,36 @@
     justify-content: center;
     align-items: center;
     border: 3px black solid;
+    margin-bottom: 100px;
+    background-color: yellow;
 }
 
 .flex-item {
     display: flex;
-    margin: 10px;
+    margin: 3px;
     width: 33%;
     flex-wrap: wrap;
     border: 3px red solid;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    height: 508px;
 }
 
 .heroData {
     height: 150px;
-    align-items: center; */
+    align-items: center;
     justify-content: center;
     width: 45%;
+    border:none;
 }
 
 img.flex-item.heroData {
     border-radius: 50%;
+}
+.container.jumbotron {
+  background-color: black;
+  color: yellow;
 }
 
 img.headerImage {
