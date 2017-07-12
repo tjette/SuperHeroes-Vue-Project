@@ -16,18 +16,6 @@ app.use('/api/heroes', heroRoutes);
 
 app.use(express.static(__dirname + '/public'));
 
-
-//params allows you to grab a unique id to find a specific document
-app.get("/api/heroes/:_id", function(req,res){
-  Superhero.findById(req.params._id, function(err, superhero){
-    if (err) {
-      res.send(err);
-    } else {
-      res.json({data: superhero, message: "Hero retrieved!"});
-    }
-  });
-});
-
 app.delete('/api/heroes/:_id', function(req,res){
   Superhero.remove({_id: req.params._id }, function(err){
     if(err){
