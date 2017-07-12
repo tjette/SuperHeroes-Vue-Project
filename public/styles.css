@@ -20,7 +20,22 @@
 }
 
 .heroData {
-  height: 150px;
+    height: 150px;
+    align-items: center; */
+    justify-content: center;
+    width: 45%;
+}
+
+img.flex-item.heroData {
+    border-radius: 50%;
+}
+
+img.headerImage {
+    display: block;
+    margin: auto;
+    height: 100px;
+    border-radius: 50%;
+    /* text-align: center; */
 }
 
 .postTitle{

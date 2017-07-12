@@ -22,11 +22,12 @@
 <div class="" id="app">
 <div class="container jumbotron">
   <h1 class="titleHeader">{{title}}</h1>
+  <img class="headerImage" src="https://s-media-cache-ak0.pinimg.com/originals/4f/bd/4e/4fbd4e85f1cc81bff636f1a188ee5a7a.png" alt="">
 </div>
 <div class="flex-container">
   <div class="flex-item" v-for="h in heroes">
       <h3 class="flex-item heroData">{{h.name}}</h3>
-      <p class="flex-item heroData">{{h.superPower}}</p>
+      <p class="flex-item heroData">Superpower: {{h.superPower}}</p>
       <img class="flex-item heroData" :src="h.img"/>
 
   <div class="col-md-12">
