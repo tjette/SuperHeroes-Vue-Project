@@ -19,7 +19,7 @@ body{
 .flex-item {
     display: flex;
     margin: 3px;
-    width: 22%;
+    width: 32%;
     flex-wrap: wrap;
     border: 3px red solid;
     align-items: center;
@@ -42,7 +42,7 @@ body{
 .villainItem {
     display: flex;
     margin: 3px;
-    width: 22%;
+    width: 32%;
     flex-wrap: wrap;
     border: 3px red solid;
     align-items: center;
