@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 
 var heroRoutes = require('./routes/superheroes');
 var Superhero = require('./models/Superhero')
+var Villain = require('./models/Villain');
 var app = express();
 var port = 3000;
 
