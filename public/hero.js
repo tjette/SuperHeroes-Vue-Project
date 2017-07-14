@@ -1,5 +1,5 @@
 var title = "Superheroes";
-var appUrl = "/api"
+
 var app = new Vue ({
     el: '#app',
     data: {

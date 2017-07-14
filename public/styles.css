@@ -13,9 +13,33 @@ body{
     margin-bottom: 100px;
     background-color: yellow;
     flex-wrap: wrap;
+    width: 50%;
 }
 
 .flex-item {
+    display: flex;
+    margin: 3px;
+    width: 22%;
+    flex-wrap: wrap;
+    border: 3px red solid;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 508px;
+}
+
+.villainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px black solid;
+    margin-bottom: 100px;
+    background-color: yellow;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.villainItem {
     display: flex;
     margin: 3px;
     width: 22%;
