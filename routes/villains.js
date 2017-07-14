@@ -32,4 +32,26 @@ Router.route('/')
     });
   });
 
+  Router.route('/:_id')
+
+    .get(function(req,res){
+        Villain.findById(req.params._id, function(err, villain){
+          if(err){
+            res.send(err, "error");
+          } else {
+            res.json({message: "received a villain", data: villain})
+          }
+        })
+    })
+
+    .delete(function(req,res){
+      Villain.remove({_id: req.params._id}, function(err){
+        if(err){
+          res.send(err, "error");
+        } else {
+          res.send("Villain deleted");
+        }
+      })
+    })
+
 module.exports = Router;
