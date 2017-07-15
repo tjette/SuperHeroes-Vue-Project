@@ -74,7 +74,7 @@
 </nav>
 
 
-<div class="container">
+
 
 
 
@@ -83,12 +83,11 @@
     <p>{{message}}</p>
   </div> -->
   <div class="" id="app">
-    <div class="container jumbotron">
-      <h1 class="titleHeader">{{title}}</h1>
-      <img class="titleHeader" src="./images/bam.jpeg" alt="">
+    <div class="jumbotron">
     </div>
+    <div class="container">
     <div class="">
-      <input type="text" placeholder="Enter Superhero Name" class="searchHero" v-model="searchString">
+      <input type="text" placeholder="Enter Superhero Names" class="searchHero" v-model="searchString">
     </div>
       <div class="flex-container">
       <div class="flex-item" v-for="h in filteredHeroes">
@@ -104,21 +103,21 @@
 
     </div>
   </div>
+</div>
   <div class="" id="villain">
-    <div class="villainContainer">
-      <div class="villainItem" v-for="v in villains">
-        <h3 class="villainItem heroData">{{v.name}}</h3>
-        <p class="villainItem heroData">Evil Power: {{v.evilPower}}</p>
-        <img class="villainItem heroData" :src="v.img" alt="">
-
-        <div class="">
-          <button type="button" class="btn btn-danger" v-on:click='deleteVillain(v._id)'>Delete Villain</button>
+    <div class="container">
+        <div class="villainContainer">
+          <div class="villainItem" v-for="v in villains">
+            <h3 class="villainItem heroData">{{v.name}}</h3>
+            <p class="villainItem heroData">Evil Power: {{v.evilPower}}</p>
+            <img class="villainItem heroData" :src="v.img" alt="">
+            <div class="">
+              <button type="button" class="btn btn-danger" v-on:click='deleteVillain(v._id)'>Delete Villain</button>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
   </div>
-
-</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

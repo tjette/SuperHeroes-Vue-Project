@@ -61,6 +61,14 @@ p.heroData {
     margin-top: -50px;
 }
 
+.jumbotron {
+    background-image: url(http://cdn.playbuzz.com/cdn/639f09a7-e6e7-4755-bdf0-d22e9d2a7528/ddc3a688-03b5-4dd6-9a08-78af32de84b6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 169px;
+    background-position: 0% 39%;
+}
+
 input.searchHero {
     margin: auto;
     display: block;
@@ -73,10 +81,6 @@ img.flex-item.heroData {
 img.titleHeader {
     margin: auto;
     display: block;
-}
-.container.jumbotron {
-  background-color: black;
-  color: yellow;
 }
 
 img.headerImage {
