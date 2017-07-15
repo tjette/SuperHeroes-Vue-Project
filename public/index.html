@@ -72,16 +72,29 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
 <div class="container">
-<div class="row">
-  <div class="" id="app">
+
+
     <div class="container jumbotron">
       <h1 class="titleHeader">{{title}}</h1>
       <img class="titleHeader" src="./images/bam.jpeg" alt="">
     </div>
+  <!-- <div class="" id="search">
+    <input type="text" v-model="message">
+    <p>{{message}}</p>
+  </div> -->
+  <div class="" id="app">
+    <div class="" v-bind:search="findHero">
+      <p>{{message | findHero}}</p>
+      <input type="text" v-model="message">
+    </div>
+
 
     <div class="flex-container">
       <div class="flex-item" v-for="h in heroes">
+
           <h3 class="flex-item heroData">{{h.name}}</h3>
           <p class="flex-item heroData">Superpower: {{h.superPower}}</p>
           <img class="flex-item heroData" :src="h.img"/>
@@ -106,7 +119,7 @@
       </div>
     </div>
   </div>
-</div>
+
 </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -115,5 +128,6 @@
     <script src="https://unpkg.com/vue"></script>
     <script src="./hero.js"></script>
     <script src="./villain.js"></script>
+    <script src="./search.js"></script>
   </body>
 </html>

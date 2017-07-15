@@ -8,7 +8,8 @@ var app = new Vue ({
       postTitle: "Create a Superhero",
       name: undefined,
       superPower: undefined,
-      img: undefined
+      img: undefined,
+      message: "Enter a superhero"
 
     },
     created: function(){
@@ -56,6 +57,20 @@ var app = new Vue ({
         }).done(function(response){
           console.log(response);
         })
+      },
+      searchHeroes: function(){
+        var self = this;
+
+        var searchHeroes = heroes.map(function(hero){
+          return hero;
+        })
       }
+    },
+    filters: {
+    findHero: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      return value.charAt(0).toUpperCase() + value.slice(1)
     }
+  }
 });
