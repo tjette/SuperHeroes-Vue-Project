@@ -9,7 +9,7 @@ var app = new Vue ({
       name: undefined,
       superPower: undefined,
       img: undefined,
-      message: "Enter a superhero"
+      searchString: ""
 
     },
     created: function(){
@@ -44,7 +44,7 @@ var app = new Vue ({
         }).done(function(response){
           console.log(response);
           console.log(response.data, "Hero Created");
-          response.redirect('/');
+
         })
       },
       deleteHero: function(_id){
@@ -57,20 +57,26 @@ var app = new Vue ({
         }).done(function(response){
           console.log(response);
         })
-      },
-      searchHeroes: function(){
-        var self = this;
-
-        var searchHeroes = heroes.map(function(hero){
-          return hero;
-        })
       }
     },
-    filters: {
-    findHero: function (value) {
-      if (!value) return ''
-      value = value.toString()
-      return value.charAt(0).toUpperCase() + value.slice(1)
+    computed: {
+    filteredHeroes: function () {
+      var self = this;
+      var heroes = self.heroes;
+      var searchString = self.searchString;
+
+      if(!searchString){
+        return heroes;
+      }
+      searchString = searchString.trim().toLowerCase();
+
+      heroes = heroes.filter(function(item){
+        if(item.name.toLowerCase().indexOf(searchString) !== -1){
+          return item;
+        }
+      })
+      return heroes;
+
     }
   }
 });

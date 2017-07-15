@@ -86,13 +86,10 @@
     <p>{{message}}</p>
   </div> -->
   <div class="" id="app">
-    <div class="" v-bind:search="findHero">
-      <p>{{message | findHero}}</p>
-      <input type="text" v-model="message">
+    <div class="">
+      <input type="text" v-model="searchString">
     </div>
-
-
-    <div class="flex-container">
+      <div class="flex-container">
       <div class="flex-item" v-for="h in heroes">
 
           <h3 class="flex-item heroData">{{h.name}}</h3>
