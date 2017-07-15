@@ -13,19 +13,18 @@ body{
     margin-bottom: 100px;
     background-color: yellow;
     flex-wrap: wrap;
-    width: 50%;
+    width: 100%;
 }
 
 .flex-item {
     display: flex;
     margin: 3px;
-    width: 32%;
+    width: 16%;
     flex-wrap: wrap;
     border: 3px red solid;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 508px;
 }
 
 .villainContainer {
@@ -36,19 +35,18 @@ body{
     margin-bottom: 100px;
     background-color: yellow;
     flex-wrap: wrap;
-    width: 50%;
+    width: 100%;
 }
 
 .villainItem {
     display: flex;
     margin: 3px;
-    width: 32%;
+    width: 16%;
     flex-wrap: wrap;
     border: 3px red solid;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 508px;
 }
 
 .heroData {
@@ -57,6 +55,16 @@ body{
     justify-content: center;
     width: 45%;
     border:none;
+}
+
+p.heroData {
+    margin-top: -50px;
+}
+
+input.searchHero {
+    margin: auto;
+    display: block;
+    margin-bottom: 15px;
 }
 
 img.flex-item.heroData {

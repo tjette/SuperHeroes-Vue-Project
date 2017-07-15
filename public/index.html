@@ -77,17 +77,18 @@
 <div class="container">
 
 
-    <div class="container jumbotron">
-      <h1 class="titleHeader">{{title}}</h1>
-      <img class="titleHeader" src="./images/bam.jpeg" alt="">
-    </div>
+
   <!-- <div class="" id="search">
     <input type="text" v-model="message">
     <p>{{message}}</p>
   </div> -->
   <div class="" id="app">
+    <div class="container jumbotron">
+      <h1 class="titleHeader">{{title}}</h1>
+      <img class="titleHeader" src="./images/bam.jpeg" alt="">
+    </div>
     <div class="">
-      <input type="text" v-model="searchString">
+      <input type="text" placeholder="Enter Superhero Name" class="searchHero" v-model="searchString">
     </div>
       <div class="flex-container">
       <div class="flex-item" v-for="h in filteredHeroes">
