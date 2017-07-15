@@ -90,7 +90,7 @@
       <input type="text" v-model="searchString">
     </div>
       <div class="flex-container">
-      <div class="flex-item" v-for="h in heroes">
+      <div class="flex-item" v-for="h in filteredHeroes">
 
           <h3 class="flex-item heroData">{{h.name}}</h3>
           <p class="flex-item heroData">Superpower: {{h.superPower}}</p>
