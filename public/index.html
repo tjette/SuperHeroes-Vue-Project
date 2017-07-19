@@ -106,8 +106,11 @@
 </div>
   <div class="" id="villain">
     <div class="container">
+      <div class="">
+        <input type="text" placeholder="Enter Villain Name" class="searchHero" v-model="searchString">
+      </div>
         <div class="villainContainer">
-          <div class="villainItem" v-for="v in villains">
+          <div class="villainItem" v-for="v in filteredVillains">
             <h3 class="villainItem heroData">{{v.name}}</h3>
             <p class="villainItem heroData">Evil Power: {{v.evilPower}}</p>
             <img class="villainItem heroData" :src="v.img" alt="">

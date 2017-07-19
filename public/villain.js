@@ -5,7 +5,8 @@ var villainApp = new Vue({
     villains: undefined,
     name: undefined,
     evilPower: undefined,
-    img: undefined
+    img: undefined,
+    searchString: ""
   },
   created: function(){
     this.fetchData();
@@ -53,5 +54,25 @@ var villainApp = new Vue({
       })
 
     }
+  },
+  computed: {
+  filteredVillains: function () {
+    var self = this;
+    var villains = self.villains;
+    var searchString = self.searchString;
+
+    if(!searchString){
+      return villains;
+    }
+    searchString = searchString.trim().toLowerCase();
+
+    villains = villains.filter(function(item){
+      if(item.name.toLowerCase().indexOf(searchString) !== -1){
+        return item;
+      }
+    })
+    return villains;
+
   }
+}
 })
